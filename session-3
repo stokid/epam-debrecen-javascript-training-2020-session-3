@@ -1,0 +1,53 @@
+// HW #1
+
+var attrs = 'name age city gender';
+var values = [
+    ['Joe', 22, 'New York City', 'male'],
+    ['Jane', 85, 'Las Vegas', 'female'],
+    ['Jack', 55, 'London', 'male']
+    ];
+
+var key = attrs.split(' ');
+var people = [];
+var i;
+var j;
+for (i=0; i<values.length; i++) {
+  var person = {};
+  for (j=0; j<key.length; j++) {
+    person[key[j]] = values[i][j];
+  }
+  people.push(person);
+}
+console.log(people);
+//-------------------------------------------------------------------
+
+// HW #2/1
+
+var levels = 4;
+var star = "*"
+var i;
+var j;
+for (i=1; i<=levels; i++) {
+  var string = "";
+  for (j=1; j<=i; j++) {
+    string += (star.repeat(j)) + "\n";  
+  }
+}
+console.log(string);
+//---------------------------------------------------------------
+
+//HW #2/2
+
+var levels = 4;
+var star = "*"
+var space = " "
+
+var i;
+var j;
+for (i=1; i<=levels; i++) {
+  var string = "";
+  for (j=1; j<=i; j++) {
+    string += (space.repeat(levels-j)) + (star.repeat(j)) + (star.repeat(j-1)) + "\n";  
+  }
+}
+console.log(string);
